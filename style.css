@@ -1,12 +1,15 @@
-/* The @import rule below imports the Playfair Display and Source Sans Pro fonts into the stylesheet*/
+/* The @import rule below imports the Playfair Display and Source Sans Pro fonts into the stylesheet */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Sans+Pro:wght@400&display=swap");
 
 body {
   background-color: #eae2b7;
   color: #003049;
   font-family: "Source Sans Pro", Tahoma, Geneva, Verdana, sans-serif;
-  padding: 40px;
+  padding: 0 40px;
+  font-size: 20px;
+  font-weight: 500;
 }
+
 
 /* Headings */
 h1,
@@ -14,32 +17,66 @@ h2,
 h3 {
   font-family: "Playfair Display", Times, serif;
   text-align: center;
+  font-weight: bold;
 }
 
 /* Header */
-header {
-  text-align: center;
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  margin: auto;
+
+}
+
+/* Navigation */
+nav a {
+  padding-left: 20px;
+  padding-top: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #d62828;
+  font-size: 15px;
+  font-family: "Playfair Display", Times, serif
+}
+
+nav a:hover {
+  color: #f77f00;
 }
 
 /* Containers */
-div {
+.container {
   background-color: #eae2b7;
   margin: auto;
-  width: 600px;
+  width: 80%;
+  max-width: 800px;
 }
 
+/* Article spacing */
 article {
   padding: 50px 0;
 }
 
-article div {
-  text-align: center;
-  width: 100%;
+/* Sections */
+section {
+  margin-bottom: 40px;
 }
 
 /* Paragraphs */
 p {
   line-height: 1.5;
+  font-size: 21px;
+}
+
+/* Lists */
+ul,
+ol {
+  padding-left: 20px;
+}
+
+ol li {
+  margin: 5px 0;
 }
 
 /* Links */
@@ -49,10 +86,6 @@ a:link {
 
 a:hover {
   color: #f77f00;
-}
-
-nav a {
-  padding-left: 20px;
 }
 
 /* Images */
@@ -65,14 +98,47 @@ img {
 .image-circle {
   border: 2px solid #003049;
   border-radius: 50%;
+
+}
+
+/* About section flex */
+.about-flex {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.about-flex > div {
+  flex: 1;
+  text-align: left;
+}
+
+/* Portfolio layout */
+#portfolio {
+  text-align: center;
+}
+
+#portfolio section {
+  display: inline-block;
+  width: 30%;
+  margin: 1%;
+  vertical-align: top;
+  text-align: center;
+}
+
+#portfolio img {
+  margin-bottom: 10px;
 }
 
 /* Footer */
 footer {
   text-align: center;
+  margin-top: 40px;
 }
 
-/* Other page elements */
+/* Divider */
 hr {
   border: 1px solid black;
 }
